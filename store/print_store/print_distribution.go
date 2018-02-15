@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 	"github.com/onsi/say"
 	"github.com/pivotal-cf-experimental/veritas/veritas_models"
 )

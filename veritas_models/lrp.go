@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 )
 
 type VeritasLRP struct {

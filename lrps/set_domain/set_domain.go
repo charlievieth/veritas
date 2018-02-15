@@ -3,7 +3,7 @@ package set_domain
 import (
 	"time"
 
-	"github.com/cloudfoundry-incubator/bbs"
+	"code.cloudfoundry.org/bbs"
 	"github.com/onsi/say"
 )
 

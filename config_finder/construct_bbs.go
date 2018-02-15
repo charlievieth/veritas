@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/cloudfoundry-incubator/bbs"
+	"code.cloudfoundry.org/bbs"
 )
 
 func NewBBS(c BBSConfig) (bbs.Client, error) {

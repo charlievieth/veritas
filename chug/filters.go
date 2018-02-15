@@ -3,7 +3,7 @@ package chug
 import (
 	"regexp"
 
-	"github.com/pivotal-golang/lager/chug"
+	"code.cloudfoundry.org/lager/chug"
 )
 
 var colorRe = regexp.MustCompile("\x1b" + `\[\d+m`)

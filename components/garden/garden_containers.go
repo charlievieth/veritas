@@ -1,21 +1,15 @@
 package garden
 
 import (
-	"encoding/json"
-	"fmt"
+	"errors"
 	"io"
-	"strings"
-	"sync"
-
-	"github.com/cloudfoundry/gunk/workpool"
-
-	"github.com/cloudfoundry-incubator/garden"
-	"github.com/cloudfoundry-incubator/garden/client"
-	"github.com/cloudfoundry-incubator/garden/client/connection"
-
-	"github.com/onsi/say"
 )
 
+func GardenContainers(gardenAddr string, gardenNetwork string, raw bool, out io.Writer) error {
+	return errors.New("GardenContainers: not implemented")
+}
+
+/*
 type ContainerInfo struct {
 	Handle  string
 	Info    garden.ContainerInfo
@@ -146,3 +140,4 @@ func printContainer(out io.Writer, containerInfo ContainerInfo) {
 		}
 	}
 }
+*/

@@ -3,7 +3,7 @@ package veritas_models
 import (
 	"sort"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 )
 
 type VeritasTasks map[string][]*models.Task

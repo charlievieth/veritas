@@ -3,7 +3,7 @@ package print_store
 import (
 	"time"
 
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs/models"
 
 	"github.com/onsi/gomega/format"
 	"github.com/onsi/say"

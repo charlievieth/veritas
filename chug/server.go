@@ -16,9 +16,9 @@ import (
 	"strings"
 	"time"
 
+	"code.cloudfoundry.org/lager"
+	"code.cloudfoundry.org/lager/chug"
 	"github.com/onsi/say"
-	"github.com/pivotal-golang/lager"
-	"github.com/pivotal-golang/lager/chug"
 )
 
 type JSFriendlyChugEntry struct {

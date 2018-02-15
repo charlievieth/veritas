@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/pivotal-golang/lager/chug"
+	"code.cloudfoundry.org/lager/chug"
 )
 
 func ChugWithFilter(reader io.Reader, minTime time.Time, maxTime time.Time, match *regexp.Regexp, exclude *regexp.Regexp) chan chug.Entry {

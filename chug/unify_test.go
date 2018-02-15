@@ -6,8 +6,8 @@ import (
 	"regexp"
 	"time"
 
+	"code.cloudfoundry.org/lager"
 	. "github.com/pivotal-cf-experimental/veritas/chug"
-	"github.com/pivotal-golang/lager"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

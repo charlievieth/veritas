@@ -5,8 +5,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/cloudfoundry-incubator/bbs"
-	"github.com/cloudfoundry-incubator/bbs/models"
+	"code.cloudfoundry.org/bbs"
+	"code.cloudfoundry.org/bbs/models"
 	"github.com/pivotal-cf-experimental/veritas/veritas_models"
 )
 

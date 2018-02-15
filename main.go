@@ -10,35 +10,30 @@ import (
 	"github.com/onsi/say"
 	"github.com/pivotal-cf-experimental/veritas/chug"
 	"github.com/pivotal-cf-experimental/veritas/common"
-	"github.com/pivotal-cf-experimental/veritas/components"
-	"github.com/pivotal-cf-experimental/veritas/config_finder"
-	"github.com/pivotal-cf-experimental/veritas/lrps"
-	"github.com/pivotal-cf-experimental/veritas/store"
-	"github.com/pivotal-cf-experimental/veritas/tasks"
 )
 
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	commandGroups := []common.CommandGroup{
-		common.CommandGroup{
-			Name:        "Setup",
-			Description: "Commands to set veritas up on a BOSH Job",
-			Commands: []common.Command{
-				config_finder.AutodetectCommand(),
-			},
-		},
+		// common.CommandGroup{
+		// 	Name:        "Setup",
+		// 	Description: "Commands to set veritas up on a BOSH Job",
+		// 	Commands: []common.Command{
+		// 		config_finder.AutodetectCommand(),
+		// 	},
+		// },
 
-		common.CommandGroup{
-			Name:        "BBS",
-			Description: "Commands to fetch from the BBS",
-			Commands: []common.Command{
-				store.DumpStoreCommand(),
-				store.FetchStoreCommand(),
-				store.PrintStoreCommand(),
-				store.DistributionCommand(),
-			},
-		},
+		// common.CommandGroup{
+		// 	Name:        "BBS",
+		// 	Description: "Commands to fetch from the BBS",
+		// 	Commands: []common.Command{
+		// 		store.DumpStoreCommand(),
+		// 		store.FetchStoreCommand(),
+		// 		store.PrintStoreCommand(),
+		// 		store.DistributionCommand(),
+		// 	},
+		// },
 		common.CommandGroup{
 			Name:        "Chug",
 			Description: "Commands to prettify lager logs",
@@ -48,34 +43,34 @@ func main() {
 				chug.UnifyChugCommand(),
 			},
 		},
-		common.CommandGroup{
-			Name:        "Components",
-			Description: "Commands to fetch information from various components",
-			Commands: []common.Command{
-				components.RepStateCommand(),
-				components.GardenContainersCommand(),
-				components.VitalsCommand(),
-			},
-		},
-		common.CommandGroup{
-			Name:        "LRPS " + say.Red("[DANGER]"),
-			Description: "Commands to remove DesiredLRPs and modify Domains",
-			Commands: []common.Command{
-				lrps.CreateDesiredLRPCommand(),
-				lrps.UpdateDesiredLRPCommand(),
-				lrps.RemoveLRPCommand(),
-				lrps.GetDesiredLRPCommand(),
-				lrps.GetActualLRPCommand(),
-				lrps.SetDomainCommand(),
-			},
-		},
-		common.CommandGroup{
-			Name:        "Tasks " + say.Red("[DANGER]"),
-			Description: "Commands to manipulate Tasks",
-			Commands: []common.Command{
-				tasks.GetTaskCommand(),
-			},
-		},
+		// common.CommandGroup{
+		// 	Name:        "Components",
+		// 	Description: "Commands to fetch information from various components",
+		// 	Commands: []common.Command{
+		// 		components.RepStateCommand(),
+		// 		components.GardenContainersCommand(),
+		// 		components.VitalsCommand(),
+		// 	},
+		// },
+		// common.CommandGroup{
+		// 	Name:        "LRPS " + say.Red("[DANGER]"),
+		// 	Description: "Commands to remove DesiredLRPs and modify Domains",
+		// 	Commands: []common.Command{
+		// 		lrps.CreateDesiredLRPCommand(),
+		// 		lrps.UpdateDesiredLRPCommand(),
+		// 		lrps.RemoveLRPCommand(),
+		// 		lrps.GetDesiredLRPCommand(),
+		// 		lrps.GetActualLRPCommand(),
+		// 		lrps.SetDomainCommand(),
+		// 	},
+		// },
+		// common.CommandGroup{
+		// 	Name:        "Tasks " + say.Red("[DANGER]"),
+		// 	Description: "Commands to manipulate Tasks",
+		// 	Commands: []common.Command{
+		// 		tasks.GetTaskCommand(),
+		// 	},
+		// },
 	}
 
 	if len(os.Args) == 1 || os.Args[1] == "help" {
